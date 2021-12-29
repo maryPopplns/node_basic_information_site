@@ -9,15 +9,19 @@ const server = http.createServer((req, res) => {
   let path;
   switch (url) {
     case '/':
+      res.statusCode = 200;
       path = 'client/index.html';
       break;
     case '/about':
+      res.statusCode = 200;
       path = 'client/about.html';
       break;
     case '/contact-me':
+      res.statusCode = 200;
       path = 'client/contact-me.html';
       break;
     default:
+      res.statusCode = 404;
       path = 'client/404.html';
   }
 
@@ -26,7 +30,6 @@ const server = http.createServer((req, res) => {
       console.error(err);
       return;
     }
-    res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
     res.end(data);
   });
