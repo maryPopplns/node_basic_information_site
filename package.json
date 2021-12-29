@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/maryPopplns/node_basic_information_site/issues"
   },
-  "homepage": "https://github.com/maryPopplns/node_basic_information_site#readme"
+  "homepage": "https://github.com/maryPopplns/node_basic_information_site#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.5"
+  }
 }
