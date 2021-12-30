@@ -1,13 +1,14 @@
 const http = require('http');
 const fs = require('fs');
+const url = require('url');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  const url = req.url;
+  const url1 = req.url;
   let path;
-  switch (url) {
+  switch (url1) {
     case '/':
       res.statusCode = 200;
       path = 'client/index.html';
